@@ -1,0 +1,10 @@
+<html>
+	<head>
+		<title>Showing &quot;<%= h @article.title -%>&quot;</title>
+	</head>
+	<body>
+		<%= link_to 'Return to the main page', articles_path %>
+		<h1> <%= h @article.title -%> </h1>
+		<p> <%= h @article.content -%> </p>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+        <head>
+                <title>Index of articles</title>
+        </head>
+
+        <body>
+                <h1>List of articles written so far</h1>
+		<hr>
+		<%= link_to 'Create a new article', :action => 'new' %>
+                <% @articles.each do |article| %>
+                <h2> <%= link_to (h article.title), article %> </h2>
+                <p> <%= h article.content %> </p>
+		<p> 
+			<%= link_to 'Edit', edit_article_path(article) %>
+			<%= link_to 'Delete', article, :method => :delete %>
+			Comments (TODO)
+		</p>
+                <% end %>
+        </body>
+</html>
+

@@ -1,0 +1,1429 @@
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:22:19) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: articles: SELECT * FROM "articles" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: articles: SELECT * FROM "articles" ):
+  app/controllers/articles_controller.rb:3:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (150.0ms)
+Rendered rescues/_request_and_response (5.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:22:24) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSQLite3::SQLException: no such table: articles: SELECT * FROM "articles" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: articles: SELECT * FROM "articles" ):
+  app/controllers/articles_controller.rb:3:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (259.5ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-19 23:22:30) [GET]
+
+ActionController::RoutingError (No route matches "/article/index" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-19 23:22:35) [GET]
+
+ActionController::RoutingError (No route matches "/article" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (126.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (71.2ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20101019211749)
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101019211749')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:23:09) [GET]
+  [4;36;1mArticle Load (1.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+
+ActionView::MissingTemplate (Missing template articles/index.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:23:52) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 39ms (View: 23, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-10-19 23:24:06) [GET]
+
+ActionView::MissingTemplate (Missing template articles/new.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-10-19 23:24:36) [GET]
+Rendering articles/new
+
+ActionView::TemplateError (undefined method `articles_path' for #<ActionView::Base:0xb6e2c758>) on line #8 of app/views/articles/new.html.erb:
+5: 
+6:         <body>
+7:                 <h1>Create an article</h1>
+8:                 <% form_for(@article) do |f| %>
+9:                 <p>
+10:                         <%= f.label :title %> <br />
+11:                         <%= f.text_field :title %>
+
+    app/views/articles/new.html.erb:8
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (154.9ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-10-19 23:26:04) [GET]
+Rendering articles/new
+Completed in 52ms (View: 38, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-10-19 23:26:13) [POST]
+  Parameters: {"article"=>{"title"=>"Test", "content"=>"Testowa treść!"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo="}
+Rendering articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #8 of app/views/articles/index.html.erb:
+5: 
+6:         <body>
+7:                 <h1>List of articles written so far</h1>
+8:                 <% @articles.each do |article| %>
+9:                 <h2> <%= h article.title %> </h2>
+10:                 <p> <%= h article.content %> </p>
+11:                 <% end %>
+
+    app/views/articles/index.html.erb:8
+    app/controllers/articles_controller.rb:8:in `create'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (175.5ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:26:41) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 16ms (View: 2, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-10-19 23:26:44) [GET]
+Rendering articles/new
+Completed in 48ms (View: 25, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-10-19 23:26:49) [POST]
+  Parameters: {"article"=>{"title"=>"df", "content"=>"jkjk"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo="}
+Rendering articles/new
+Completed in 44ms (View: 21, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:26:52) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 17ms (View: 2, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:26:54) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 17ms (View: 3, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:27:01) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 16ms (View: 3, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-10-19 23:27:04) [GET]
+Rendering articles/new
+Completed in 51ms (View: 27, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-10-19 23:27:06) [POST]
+  Parameters: {"article"=>{"title"=>"jkjk", "content"=>"jk"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo="}
+
+ActionView::MissingTemplate (Missing template articles/create.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-10-19 23:28:46) [POST]
+  Parameters: {"article"=>{"title"=>"jkjk", "content"=>"jk"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo="}
+
+ActionView::MissingTemplate (Missing template articles/create.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-10-19 23:28:49) [POST]
+  Parameters: {"article"=>{"title"=>"jkjk", "content"=>"jk"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo="}
+
+ActionView::MissingTemplate (Missing template articles/create.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-10-19 23:30:55) [GET]
+
+SyntaxError (/home/szy/Work/Rails/new/simplecms/app/controllers/articles_controller.rb:26: syntax error, unexpected $end, expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (229.3ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-10-19 23:31:02) [GET]
+Rendering articles/new
+Completed in 39ms (View: 24, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-10-19 23:31:05) [POST]
+  Parameters: {"article"=>{"title"=>"jkjk", "content"=>"jk"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo="}
+  [4;36;1mArticle Create (1.5ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "updated_at", "content") VALUES('2010-10-19 21:31:05', 'jkjk', '2010-10-19 21:31:05', 'jk')[0m
+Redirected to http://localhost:3000/articles/1
+Completed in 125ms (DB: 1) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-19 23:31:05) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionView::MissingTemplate (Missing template articles/show.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-19 23:31:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+
+ActionView::MissingTemplate (Missing template articles/show.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-19 23:33:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+
+ActionView::TemplateError (undefined local variable or method `article' for #<ActionView::Base:0xb6e5f2ac>) on line #3 of app/views/articles/show.html.erb:
+1: <html>
+2: 	<head>
+3: 		<title>Showing &quot <%= h article.title -%> %quot</title>
+4: 	</head>
+5: 	<body>
+6: 		<h1>TODO</h1>
+
+    app/views/articles/show.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (143.7ms)
+Rendered rescues/_request_and_response (24.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-19 23:33:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+Completed in 39ms (View: 21, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-19 23:34:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+Completed in 38ms (View: 19, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-19 23:34:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+Completed in 24ms (View: 7, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-19 23:34:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+Completed in 33ms (View: 16, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-19 23:35:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+Completed in 33ms (View: 17, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:35:41) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 25ms (View: 6, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-10-19 23:35:44) [GET]
+Rendering articles/new
+Completed in 47ms (View: 23, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-10-19 23:36:08) [POST]
+  Parameters: {"article"=>{"title"=>"Pure bullsh*t", "content"=>"Just a couple of words to test the application. Blah blah blah and so on. Don't read this if you want to stay sane. You've been warned - this crappy text literally melts down your brain. And to make matters worse, it's irreversible!"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo="}
+  [4;35;1mArticle Create (0.7ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "updated_at", "content") VALUES('2010-10-19 21:36:08', 'Pure bullsh*t', '2010-10-19 21:36:08', 'Just a couple of words to test the application. Blah blah blah and so on. Don''t read this if you want to stay sane. You''ve been warned - this crappy text literally melts down your brain. And to make matters worse, it''s irreversible!')[0m
+Redirected to http://localhost:3000/articles/2
+Completed in 127ms (DB: 1) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-19 23:36:08) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering articles/show
+Completed in 34ms (View: 19, DB: 1) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:36:12) [GET]
+  [4;35;1mArticle Load (1.2ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 149ms (View: 7, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:37:19) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 40ms (View: 24, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:40:21) [GET]
+  [4;35;1mArticle Load (1.3ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+
+ActionView::TemplateError (edit_article_url failed to generate from {:controller=>"articles", :action=>"edit"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["articles", :id, "edit"] - are they all satisfied?) on line #13 of app/views/articles/index.html.erb:
+10:                 <h2> <%= h article.title %> </h2>
+11:                 <p> <%= h article.content %> </p>
+12: 		<p> 
+13: 			<%= link_to 'Edit', edit_article_path(@article) %>
+14: 		</p>
+15:                 <% end %>
+16:         </body>
+
+    (eval):17:in `edit_article_path'
+    app/views/articles/index.html.erb:13
+    app/views/articles/index.html.erb:9:in `each'
+    app/views/articles/index.html.erb:9
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.3ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:40:55) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 36ms (View: 23, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:41:03) [GET]
+  [4;35;1mArticle Load (1.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 22ms (View: 7, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:41:04) [GET]
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 22ms (View: 8, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:42:48) [GET]
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 163ms (View: 149, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-10-19 23:42:51) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to edit. Actions: create, destroy, index, new, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-10-19 23:44:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+
+ActionView::MissingTemplate (Missing template articles/edit.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-10-19 23:44:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/edit
+Completed in 56ms (View: 38, DB: 1) | 200 OK [http://localhost/articles/1/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-19 23:45:00) [PUT]
+  Parameters: {"article"=>{"title"=>"heniek", "content"=>"jk"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"1"}
+
+ActionView::MissingTemplate (Missing template articles/update.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-19 23:46:24) [PUT]
+  Parameters: {"article"=>{"title"=>"heniek", "content"=>"jk"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"1"}
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+
+ActionView::MissingTemplate (Missing template articles/update.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-19 23:46:25) [PUT]
+  Parameters: {"article"=>{"title"=>"heniek", "content"=>"jk"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"1"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+
+ActionView::MissingTemplate (Missing template articles/update.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-19 23:47:28) [PUT]
+  Parameters: {"article"=>{"title"=>"heniek", "content"=>"jk"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"1"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.update_attributes):
+  app/controllers/articles_controller.rb:30:in `update'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.3ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-19 23:47:49) [PUT]
+  Parameters: {"article"=>{"title"=>"heniek", "content"=>"jk"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"1"}
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Update (0.6ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-10-19 21:47:49', "title" = 'heniek' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/articles/1
+Completed in 141ms (DB: 1) | 302 Found [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-19 23:47:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+Completed in 26ms (View: 5, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:47:52) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 30ms (View: 9, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-10-19 23:47:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/edit
+Completed in 41ms (View: 23, DB: 1) | 200 OK [http://localhost/articles/1/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-19 23:48:05) [PUT]
+  Parameters: {"article"=>{"title"=>"heniek to jozek", "content"=>"no co ty nie powiesz?!\r\n"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"1"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Update (0.6ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-10-19 21:48:05', "title" = 'heniek to jozek', "content" = 'no co ty nie powiesz?!
+' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/articles/1
+Completed in 124ms (DB: 1) | 302 Found [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-19 23:48:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+Completed in 23ms (View: 6, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:48:08) [GET]
+  [4;35;1mArticle Load (2.1ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 33ms (View: 8, DB: 2) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:49:17) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:49:58) [GET]
+  [4;35;1mArticle Load (1.8ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `destroy_article_path' for #<ActionView::Base:0xb6e072c8>) on line #14 of app/views/articles/index.html.erb:
+11:                 <p> <%= h article.content %> </p>
+12: 		<p> 
+13: 			<%= link_to 'Edit', edit_article_path(article) %>
+14: 			<%= link_to 'Delete', destroy_article_path(article) %>
+15: 		</p>
+16:                 <% end %>
+17:         </body>
+
+    app/views/articles/index.html.erb:14
+    app/views/articles/index.html.erb:9:in `each'
+    app/views/articles/index.html.erb:9
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (380.4ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:50:08) [GET]
+  [4;36;1mArticle Load (1.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `delete_article_path' for #<ActionView::Base:0xb6f69d8c>) on line #14 of app/views/articles/index.html.erb:
+11:                 <p> <%= h article.content %> </p>
+12: 		<p> 
+13: 			<%= link_to 'Edit', edit_article_path(article) %>
+14: 			<%= link_to 'Delete', delete_article_path(article) %>
+15: 		</p>
+16:                 <% end %>
+17:         </body>
+
+    app/views/articles/index.html.erb:14
+    app/views/articles/index.html.erb:9:in `each'
+    app/views/articles/index.html.erb:9
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (143.4ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:50:58) [GET]
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+
+ActionView::TemplateError (undefined local variable or method `destroy' for #<ActionView::Base:0xb6e2a5d4>) on line #14 of app/views/articles/index.html.erb:
+11:                 <p> <%= h article.content %> </p>
+12: 		<p> 
+13: 			<%= link_to 'Edit', edit_article_path(article) %>
+14: 			<%= link_to 'Delete', article, :method => destroy %>
+15: 		</p>
+16:                 <% end %>
+17:         </body>
+
+    app/views/articles/index.html.erb:14
+    app/views/articles/index.html.erb:9:in `each'
+    app/views/articles/index.html.erb:9
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (275.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:51:09) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 59ms (View: 45, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#1 (for 127.0.0.1 at 2010-10-19 23:51:11) [POST]
+  Parameters: {"authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo="}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:51:58) [GET]
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 38ms (View: 24, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:52:01) [GET]
+  Parameters: {"method"=>"destroy"}
+  [4;36;1mArticle Load (1.4ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/articles?method=destroy]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:52:06) [GET]
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 36ms (View: 14, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:52:23) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `destroy' for #<ActionView::Base:0xb6e04fc8>) on line #14 of app/views/articles/index.html.erb:
+11:                 <p> <%= h article.content %> </p>
+12: 		<p> 
+13: 			<%= link_to 'Edit', edit_article_path(article) %>
+14: 			<%= link_to 'Delete', destroy(article) %>
+15: 		</p>
+16:                 <% end %>
+17:         </body>
+
+    app/views/articles/index.html.erb:14
+    app/views/articles/index.html.erb:9:in `each'
+    app/views/articles/index.html.erb:9
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (271.0ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:52:36) [GET]
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+
+ActionView::TemplateError (undefined local variable or method `destroy_article_path' for #<ActionView::Base:0xb6f5d474>) on line #14 of app/views/articles/index.html.erb:
+11:                 <p> <%= h article.content %> </p>
+12: 		<p> 
+13: 			<%= link_to 'Edit', edit_article_path(article) %>
+14: 			<%= link_to 'Delete', destroy_article_path %>
+15: 		</p>
+16:                 <% end %>
+17:         </body>
+
+    app/views/articles/index.html.erb:14
+    app/views/articles/index.html.erb:9:in `each'
+    app/views/articles/index.html.erb:9
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (141.8ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:52:41) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `destroy_article_path' for #<ActionView::Base:0xb6e1c2f4>) on line #14 of app/views/articles/index.html.erb:
+11:                 <p> <%= h article.content %> </p>
+12: 		<p> 
+13: 			<%= link_to 'Edit', edit_article_path(article) %>
+14: 			<%= link_to 'Delete', destroy_article_path(article) %>
+15: 		</p>
+16:                 <% end %>
+17:         </body>
+
+    app/views/articles/index.html.erb:14
+    app/views/articles/index.html.erb:9:in `each'
+    app/views/articles/index.html.erb:9
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (274.3ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:56:28) [GET]
+  [4;35;1mArticle Load (1.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 57ms (View: 41, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2010-10-19 23:56:32) [DELETE]
+  Parameters: {"authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"1"}
+
+NameError (uninitialized constant ArticlesController::Product):
+  app/controllers/articles_controller.rb:38:in `destroy'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (115.3ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:57:17) [GET]
+  [4;36;1mArticle Load (1.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 52ms (View: 37, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2010-10-19 23:57:18) [DELETE]
+  Parameters: {"authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"1"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Destroy (0.8ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/articles
+Completed in 119ms (DB: 1) | 302 Found [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:57:18) [GET]
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 33ms (View: 16, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2010-10-19 23:57:20) [DELETE]
+  Parameters: {"authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"2"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Destroy (0.5ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/articles
+Completed in 260ms (DB: 1) | 302 Found [http://localhost/articles/2]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:57:20) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 16ms (View: 2, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:58:01) [GET]
+  [4;35;1mArticle Load (1.2ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 32ms (View: 17, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:58:59) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 32ms (View: 19, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-10-19 23:59:02) [GET]
+Rendering articles/new
+Completed in 36ms (View: 23, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-10-19 23:59:10) [POST]
+  Parameters: {"article"=>{"title"=>"Pure bullsh*t", "content"=>"Just a couple of words to test the application. Blah blah blah and so on. Don't read this if you want to stay sane. You've been warned - this crappy text literally melts down your brain. And to make matters worse, it's irreversible!"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo="}
+  [4;35;1mArticle Create (0.8ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "updated_at", "content") VALUES('2010-10-19 21:59:10', 'Pure bullsh*t', '2010-10-19 21:59:10', 'Just a couple of words to test the application. Blah blah blah and so on. Don''t read this if you want to stay sane. You''ve been warned - this crappy text literally melts down your brain. And to make matters worse, it''s irreversible!')[0m
+Redirected to http://localhost:3000/articles/3
+Completed in 126ms (DB: 1) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-19 23:59:10) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering articles/show
+Completed in 24ms (View: 6, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:59:16) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 39ms (View: 19, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-10-19 23:59:18) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering articles/edit
+Completed in 42ms (View: 25, DB: 1) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-19 23:59:25) [PUT]
+  Parameters: {"article"=>{"title"=>"Not so pure bullsh*t", "content"=>"Just a couple of words to test the application. Blah blah blah and so on. Don't read this if you want to stay sane. You've been warned - this crappy text literally melts down your brain. And to make matters worse, it's irreversible!"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"3"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Update (0.5ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-10-19 21:59:25', "title" = 'Not so pure bullsh*t' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/articles/3
+Completed in 108ms (DB: 1) | 302 Found [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-19 23:59:25) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering articles/show
+Completed in 23ms (View: 5, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-19 23:59:29) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 157ms (View: 17, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-10-19 23:59:35) [GET]
+Rendering articles/new
+Completed in 38ms (View: 21, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-10-20 00:00:46) [POST]
+  Parameters: {"article"=>{"title"=>"Another short art.", "content"=>"Don't bother reading this stinking post. It stinks so much that I can hardly breathe."}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo="}
+  [4;35;1mArticle Create (0.7ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "updated_at", "content") VALUES('2010-10-19 22:00:46', 'Another short art.', '2010-10-19 22:00:46', 'Don''t bother reading this stinking post. It stinks so much that I can hardly breathe.')[0m
+Redirected to http://localhost:3000/articles/4
+Completed in 130ms (DB: 1) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-20 00:00:46) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering articles/show
+Completed in 23ms (View: 5, DB: 1) | 200 OK [http://localhost/articles/4]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:00:49) [GET]
+  [4;35;1mArticle Load (1.2ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 52ms (View: 30, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-10-20 00:02:11) [GET]
+Rendering articles/new
+Completed in 37ms (View: 21, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-10-20 00:02:55) [POST]
+  Parameters: {"article"=>{"title"=>"Blah blah blah", "content"=>"Yet another pile of shitty words. Booring. Doh! If I were you, I wouldn't waste a single minute reading this."}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo="}
+  [4;36;1mArticle Create (0.8ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "updated_at", "content") VALUES('2010-10-19 22:02:55', 'Blah blah blah', '2010-10-19 22:02:55', 'Yet another pile of shitty words. Booring. Doh! If I were you, I wouldn''t waste a single minute reading this.')[0m
+Redirected to http://localhost:3000/articles/5
+Completed in 180ms (DB: 1) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-20 00:02:55) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 5) [0m
+Rendering articles/show
+Completed in 36ms (View: 18, DB: 1) | 200 OK [http://localhost/articles/5]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:02:59) [GET]
+  [4;36;1mArticle Load (1.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 64ms (View: 49, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:04:05) [GET]
+  [4;35;1mArticle Load (1.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `>' for false:FalseClass) on line #15 of app/views/articles/index.html.erb:
+12:                 <p> <%= h article.content %> </p>
+13: 		<p> 
+14: 			<%= link_to 'Edit', edit_article_path(article) %>
+15: 			<%= link_to 'Delete', article, :method => :delete %>
+16: 			Comments (TODO)
+17: 		</p>
+18:                 <% end %>
+
+    app/views/articles/index.html.erb:15
+    app/views/articles/index.html.erb:10:in `each'
+    app/views/articles/index.html.erb:10
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (154.7ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:04:51) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 69ms (View: 55, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-20 00:04:57) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering articles/show
+Completed in 40ms (View: 20, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:04:59) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 55ms (View: 40, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-20 00:05:00) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering articles/show
+Completed in 24ms (View: 6, DB: 1) | 200 OK [http://localhost/articles/4]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:05:01) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 53ms (View: 39, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-20 00:05:02) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 5) [0m
+Rendering articles/show
+Completed in 24ms (View: 5, DB: 1) | 200 OK [http://localhost/articles/5]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:05:03) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 53ms (View: 39, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-10-20 00:05:04) [GET]
+Rendering articles/new
+Completed in 54ms (View: 33, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-10-20 00:05:06) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>"k"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo="}
+  [4;35;1mArticle Create (0.7ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "updated_at", "content") VALUES('2010-10-19 22:05:06', '', '2010-10-19 22:05:06', 'k')[0m
+Redirected to http://localhost:3000/articles/6
+Completed in 133ms (DB: 1) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-20 00:05:06) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/show
+Completed in 23ms (View: 5, DB: 1) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:05:08) [GET]
+  [4;35;1mArticle Load (1.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 66ms (View: 49, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-10-20 00:05:17) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/edit
+Completed in 45ms (View: 27, DB: 1) | 200 OK [http://localhost/articles/edit/6]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-20 00:05:26) [PUT]
+  Parameters: {"article"=>{"title"=>"I'm visible now!", "content"=>"k"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"6"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+  [4;36;1mArticle Update (0.5ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-10-19 22:05:26', "title" = 'I''m visible now!' WHERE "id" = 6[0m
+Redirected to http://localhost:3000/articles/6
+Completed in 148ms (DB: 1) | 302 Found [http://localhost/articles/6]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-20 00:05:26) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/show
+Completed in 24ms (View: 7, DB: 1) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:05:27) [GET]
+  [4;36;1mArticle Load (2.2ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 65ms (View: 48, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:06:01) [GET]
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `validates_presence' for #<Class:0xb6dad340>):
+  app/models/article.rb:2
+  app/controllers/articles_controller.rb:3:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (266.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:06:20) [GET]
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 80ms (View: 63, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-10-20 00:06:24) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/edit
+Completed in 44ms (View: 26, DB: 1) | 200 OK [http://localhost/articles/6/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-20 00:06:26) [PUT]
+  Parameters: {"article"=>{"title"=>"", "content"=>"k"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"6"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/edit
+Completed in 49ms (View: 26, DB: 1) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-20 00:06:30) [PUT]
+  Parameters: {"article"=>{"title"=>"", "content"=>"k"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"6"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/edit
+Completed in 51ms (View: 25, DB: 1) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-20 00:06:32) [PUT]
+  Parameters: {"article"=>{"title"=>"klkl", "content"=>"k"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"6"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+  [4;36;1mArticle Update (0.7ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-10-19 22:06:32', "title" = 'klkl' WHERE "id" = 6[0m
+Redirected to http://localhost:3000/articles/6
+Completed in 145ms (DB: 1) | 302 Found [http://localhost/articles/6]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-20 00:06:32) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/show
+Completed in 25ms (View: 7, DB: 1) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:06:36) [GET]
+  [4;36;1mArticle Load (1.9ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 65ms (View: 49, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:07:14) [GET]
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 65ms (View: 49, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-20 00:07:16) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/show
+Completed in 143ms (View: 125, DB: 1) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:07:18) [GET]
+  [4;35;1mArticle Load (2.1ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 82ms (View: 62, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-10-20 00:07:20) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/edit
+
+ActionView::TemplateError (undefined method `errors' for #<ActionView::Helpers::FormBuilder:0xb6f4f220>) on line #9 of app/views/articles/edit.html.erb:
+6:         <body>
+7:                 <h1>Create an article</h1>
+8:                 <% form_for(@article) do |f| %>
+9: 		<%= f.errors %>
+10:                 <p>
+11:                         <%= f.label :title %> <br />
+12:                         <%= f.text_field :title %>
+
+    app/views/articles/edit.html.erb:9
+    app/views/articles/edit.html.erb:8
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (144.7ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-10-20 00:07:49) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/edit
+Completed in 58ms (View: 37, DB: 1) | 200 OK [http://localhost/articles/6/edit]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-10-20 00:08:00) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/edit
+Completed in 57ms (View: 39, DB: 1) | 200 OK [http://localhost/articles/6/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-20 00:08:06) [PUT]
+  Parameters: {"article"=>{"title"=>"", "content"=>"k"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"6"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/edit
+Completed in 65ms (View: 38, DB: 1) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-20 00:08:12) [PUT]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"6"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/edit
+Completed in 93ms (View: 61, DB: 1) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-10-20 00:08:21) [PUT]
+  Parameters: {"article"=>{"title"=>"Dummy", "content"=>"Something!"}, "commit"=>"Create", "authenticity_token"=>"AWOcTT7SQ6jFacZ47Gl2isXz8JDV+wKqd1RzGNJEcvo=", "id"=>"6"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+  [4;36;1mArticle Update (0.5ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-10-19 22:08:21', "title" = 'Dummy', "content" = 'Something!' WHERE "id" = 6[0m
+Redirected to http://localhost:3000/articles/6
+Completed in 195ms (DB: 1) | 302 Found [http://localhost/articles/6]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-10-20 00:08:21) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering articles/show
+Completed in 24ms (View: 5, DB: 1) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-10-20 00:08:24) [GET]
+  [4;36;1mArticle Load (2.1ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering articles/index
+Completed in 65ms (View: 49, DB: 2) | 200 OK [http://localhost/articles]
