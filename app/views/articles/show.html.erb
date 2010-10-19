@@ -3,8 +3,14 @@
 		<title>Showing &quot;<%= h @article.title -%>&quot;</title>
 	</head>
 	<body>
-		<%= link_to 'Return to the main page', articles_path %>
+		<p>
+			<%= link_to 'Return to the main page', articles_path %> |
+                	<%= link_to 'Edit', edit_article_path(@article) %> |
+        	        <%= link_to 'Delete', @article, :method => :delete %>
+                </p>
+
 		<h1> <%= h @article.title -%> </h1>
 		<p> <%= h @article.content -%> </p>
+		<p> Comments (TODO!) </p>
 	</body>
 </html>
