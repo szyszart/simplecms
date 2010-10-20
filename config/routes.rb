@@ -1,6 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :articles
+  map.resources :articles do |a|
+	a.resources :comments
+  end
+  map.resources :comments
   map.home '', :controller => 'articles', :action => 'index'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

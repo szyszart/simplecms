@@ -11,9 +11,9 @@
                 <h2> <%= link_to (h article.title), article %> </h2>
                 <p> <%= h article.content %> </p>
 		<p> 
-			<%= link_to 'Edit', edit_article_path(article) %>
-			<%= link_to 'Delete', article, :method => :delete %>
-			Comments (TODO)
+			<%= link_to 'Edit', edit_article_path(article) %> |
+			<%= link_to 'Delete', article, :method => :delete %> |
+			<%= link_to 'Show more', article %>
 		</p>
                 <% end %>
         </body>

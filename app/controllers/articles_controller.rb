@@ -40,3 +40,4 @@ class ArticlesController < ApplicationController
 		redirect_to(articles_path, :notice => 'Article was successfully updated.')
         end
 end
+

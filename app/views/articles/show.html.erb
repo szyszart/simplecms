@@ -11,6 +11,16 @@
 
 		<h1> <%= h @article.title -%> </h1>
 		<p> <%= h @article.content -%> </p>
-		<p> Comments (TODO!) </p>
+		<h2> Comments </h2>
+		<p>		
+			<%= link_to 'Add comment', new_article_comment_path(@article) %> 
+		</p>
+		
+		<% @article.comments.each do |a| %>
+			Written by <b> <%= h a.author %> </b> | 
+			<%= link_to 'Remove comment', a, :method => :delete %>
+			<br />
+			<p> <%= h a.content %> </p>
+		<% end %>		
 	</body>
 </html>

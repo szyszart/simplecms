@@ -1,25 +1,25 @@
 <html>
         <head>
-                <title>Create a new article</title>
+                <title>Add a comment</title>
         </head>
 
         <body>
-                <h1>Create an article</h1>
-                <% form_for(@article) do |f| %>
+                <h1>Add a comment</h1> 
+                <% form_for([@comment.article, @comment]) do |f| %>
                 <p> <%= f.error_messages %> </p>
                 <p>
-                        <%= f.label :title %> <br />
-                        <%= f.text_field :title %>
+                        <%= f.label :author %> <br />
+                        <%= f.text_field :author %>
                 </p>
                 <p>
                         <%= f.label :content %> <br />
                         <%= f.text_area :content %>
                 </p>
                 <p>
-                        <%= f.submit 'Create' %>
+                        <%= f.submit 'Post' %>
                 </p>
                <% end %>
-               <%= link_to 'Cancel', articles_path %>
+	       <%= link_to 'Cancel', @comment.article %>
         </body>
 </html>
 
